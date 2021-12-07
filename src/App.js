@@ -8,21 +8,21 @@ import MovieDetail from "./components/MovieDetail/MovieDetail";
 import "./App.scss";
 
 function App() {
-  return (
-    <div className="app">
-      <Router>
-        <Header></Header>
-        <div className="container">
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/movie/:imdbID" element={<MovieDetail />} />
-            <Route element={<PageNotFound />} />
-          </Routes>
+    return (
+        <div className="app">
+        <Router>
+            <Header></Header>
+            <div className="container">
+            <Routes>
+                <Route path="/" exact element={<Home />} />
+                <Route path="/movie/:imdbID" element={<MovieDetail />} />
+                <Route element={<PageNotFound />} />
+            </Routes>
+            </div>
+            <Footer />
+        </Router>
         </div>
-        <Footer />
-      </Router>
-    </div>
-  );
+    );
 }
 
 export default App;

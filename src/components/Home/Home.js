@@ -8,10 +8,12 @@ import { fetchAsyncMovies, fetchAsyncShows, } from '../../features/movies/movieS
 const Home = () => {
     
     const dispatch = useDispatch();
+    const movieText = "Mission";
+    const showText = "Friends";
 
     useEffect(() => {
-        dispatch(fetchAsyncMovies());
-        dispatch(fetchAsyncShows());
+        dispatch(fetchAsyncMovies(movieText));
+        dispatch(fetchAsyncShows(showText));
     }, [dispatch]);
     
     return (
